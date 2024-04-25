@@ -19,7 +19,6 @@ const SinglePage = async ({ params }) => {
   const { slug } = params;
 
   const data = await getData(slug);
-
   return (
     <div className={styles.container}>
       <div className={styles.infoContainer}>
@@ -28,7 +27,7 @@ const SinglePage = async ({ params }) => {
           <div className={styles.user}>
             {data?.user?.image && (
               <div className={styles.userImageContainer}>
-                <Image src={data.user.image} alt="" fill className={styles.avatar} />
+                <Image src={data.user.image} alt="" fill  className={styles.avatar} />
               </div>
             )}
             <div className={styles.userTextContainer}>
@@ -39,7 +38,7 @@ const SinglePage = async ({ params }) => {
         </div>
         {data?.img && (
           <div className={styles.imageContainer}>
-            <Image src={data.img} alt="" fill className={styles.image} />
+            <Image src={data.img} alt="" fill sizes="100vw" className={styles.image} />
           </div>
         )}
       </div>
