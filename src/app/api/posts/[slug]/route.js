@@ -3,6 +3,9 @@ import { NextResponse } from "next/server";
 
 // GET SINGLE POST
 export const GET = async (req, { params }) => {
+  // const { searchParams } = new URL(req.url);
+  // console.log(searchParams);
+  // console.log(searchParams.get('param'));
   const { slug } = params;
 
   try {
